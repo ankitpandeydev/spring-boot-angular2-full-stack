@@ -1,0 +1,124 @@
+{
+	"info": {
+		"_postman_id": "eb20e3d2-4b2c-4144-b2ac-47b70fef9ca1",
+		"name": "Reservation",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET - Availbale Room Reservation",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:8080/room/reservation/v1?checkin=2017-03-17&checkout=2017-03-21",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"room",
+						"reservation",
+						"v1"
+					],
+					"query": [
+						{
+							"key": "checkin",
+							"value": "2017-03-17"
+						},
+						{
+							"key": "checkout",
+							"value": "2017-03-21"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST  - Create Room Reservation",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n   \"id\": 123,\n   \"checkin\":\"2017-03-17\",\n   \"checkout\":\"2017-03-21\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/room/reservation/v1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"room",
+						"reservation",
+						"v1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT - Update Room Reservation",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n   \"id\": 123,\n   \"checkin\":\"2017-03-17\",\n   \"checkout\":\"2017-03-21\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/room/reservation/v1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"room",
+						"reservation",
+						"v1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE - Room Reservation",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:8080/room/reservation/v1/123",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"room",
+						"reservation",
+						"v1",
+						"123"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
